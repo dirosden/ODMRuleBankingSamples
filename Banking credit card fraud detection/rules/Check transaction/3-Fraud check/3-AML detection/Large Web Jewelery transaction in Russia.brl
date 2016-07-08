@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Large Web Jewelery transaction in Russia</name>
+  <uuid>cdc5b9b1-3532-489b-95ac-be9c4bfed604</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the amount in US$ of TXN is at least 20000
+    and the POS Method of TXN is "Web"
+    and the MCC of TXN is one of { "5094" , "5944" }
+    and the country of TXN is Russia
+    and the KYC status of the account holder is not "High"
+then
+    mark transaction as fraud with reason "AML - Jewelery web amount over $20,000 in Russia";]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

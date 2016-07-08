@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Variables Hotlist</name>
+  <uuid>4d451198-6e17-41ea-8f2a-b469da1fb937</uuid>
+  <variables name="acct_Hotlist" type="java.lang.String[]" initialValue="new String[] {&quot;1234 0000 0000 1234&quot;, &quot;1234 0000 0000 5678&quot;}" verbalization="the hotlist of accounts"/>
+  <variables name="country_hotlist" type="CountriesDomainType[]" initialValue="" verbalization="the high risk country list"/>
+  <variables name="sic_hotlist" type="java.lang.String[]" initialValue="new String[] {&quot;6010&quot;, &quot;6011&quot;}" verbalization="the high risk SIC list"/>
+  <variables name="mcc_hotlist" type="java.lang.String[]" initialValue="new String[] {&quot;3005&quot;,&quot;7011&quot;,&quot;7512&quot;,&quot;7994&quot;, &quot;7995&quot;}" verbalization="the high risk MCC list"/>
+</ilog.rules.studio.model.base:VariableSet>

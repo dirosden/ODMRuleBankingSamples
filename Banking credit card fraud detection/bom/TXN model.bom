@@ -1,0 +1,70 @@
+
+property loadGetterSetterAsProperties "false"
+property origin "xom:/Banking credit card fraud rules//Banking credit card fraud rules/schemas/RealTimeData.xsd"
+property uuid "b06412c4-5614-4beb-aa90-0fb7cfd6a9dc"
+package com.ilog.fraud;
+
+
+public class RealTimeCheckData
+        extends ilog.rules.xml.IlrXmlObject
+{
+    public double CardHolderBalance;
+    public string CardHolderFullName;
+    public double CardHolderLimit;
+    public double CardHolderMonthlyAverage;
+    public ilog.rules.xml.types.IlrDate CardIssueDate;
+    public string CardType;
+    public com.ilog.fraud.TransactionType CurrentTransaction;
+    public java.util.Vector RecentTransactionsList domain 0,* class com.ilog.fraud.TransactionType;
+    public ilog.rules.xml.types.IlrDateTime SecurityID;
+    public ilog.rules.xml.types.IlrDate ValidFrom;
+    public ilog.rules.xml.types.IlrDate ValidTo;
+    public RealTimeCheckData();
+    public static final string b2xKYCStatus();
+}
+
+public class TransactionType
+        extends ilog.rules.xml.IlrXmlObject
+{
+
+    public class CurrencyCodeType
+            extends ilog.rules.xml.types.xsd.XsdString
+    {
+        domain {"CAD", "EUR", "GBP", "USD", "CHF", "JPY", "AUD", "SGD", "INR", "NZD", "ZAR", "CNY", "CZK", "HKD", "ISK", "NOK", "RUB", "PLN", "THB", "TRY"}
+        public static java.lang.String[] getEnumerations();
+        public static int getLength();
+        public static int getMaxLength();
+        public static int getMinLength();
+        public static string getPattern();
+        public static string toXmlString(string instance);
+    }
+
+    public class POSEntryCodeType
+            extends ilog.rules.xml.types.xsd.XsdString
+    {
+        domain {"Other", "Keyed", "Swiped", "Chip+Pin", "Web", "Telephone", "Email"}
+        public static java.lang.String[] getEnumerations();
+        public static int getLength();
+        public static int getMaxLength();
+        public static int getMinLength();
+        public static string getPattern();
+        public static string toXmlString(string instance);
+    }
+    public string CardHolderID;
+    public string CurrencyCode domain {"CAD", "EUR", "GBP", "USD", "CHF", "JPY", "AUD", "SGD", "INR", "NZD", "ZAR", "CNY", "CZK", "HKD", "ISK", "NOK", "RUB", "PLN", "THB", "TRY"};
+    public string MerchantCC;
+    public CountriesDomainType MerchantCountry;
+    public string MerchantID;
+    public string POSEntryCode domain {"Other", "Keyed", "Swiped", "Chip+Pin", "Web", "Telephone", "Email"};
+    public string PurchaseDescription;
+    public string SICCode;
+    public double TransAmount;
+    public ilog.rules.xml.types.IlrDateTime TransDateTime;
+    public string TransID;
+    public TransactionType();
+    public double TransAmountCAD();
+    public double TransAmountEuro();
+    public double TransAmountGBP();
+    public double TransAmountUSD();
+}
+

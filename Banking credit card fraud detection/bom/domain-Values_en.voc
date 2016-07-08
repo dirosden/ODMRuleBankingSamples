@@ -1,0 +1,27 @@
+# Vocabulary Properties
+uuid = 3a058096-e390-44d9-b357-72b721fa33e5
+
+# CountriesDomainType
+CountriesDomainType#concept.label = country name
+CountriesDomainType.Australia#instance.label = Australia
+CountriesDomainType.Canada#instance.label = Canada
+CountriesDomainType.China#instance.label = China
+CountriesDomainType.Croatia#instance.label = Croatia
+CountriesDomainType.CzechRepublic#instance.label = CzechRepublic
+CountriesDomainType.France#instance.label = France
+CountriesDomainType.Germany#instance.label = Germany
+CountriesDomainType.Iceland#instance.label = Iceland
+CountriesDomainType.India#instance.label = India
+CountriesDomainType.Italy#instance.label = Italy
+CountriesDomainType.Japan#instance.label = Japan
+CountriesDomainType.Malaysia#instance.label = Malaysia
+CountriesDomainType.NewZealand#instance.label = NewZealand
+CountriesDomainType.Norway#instance.label = Norway
+CountriesDomainType.Pakistan#instance.label = Pakistan
+CountriesDomainType.Poland#instance.label = Poland
+CountriesDomainType.Russia#instance.label = Russia
+CountriesDomainType.Singapore#instance.label = Singapore
+CountriesDomainType.Spain#instance.label = Spain
+CountriesDomainType.Thailand#instance.label = Thailand
+CountriesDomainType.UK#instance.label = UK
+CountriesDomainType.USA#instance.label = USA

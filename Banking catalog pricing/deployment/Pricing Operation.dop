@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="PricingRuleset" usingRuleflow="true" ruleflowName="Pricing Process" targetRuleProjectName="Banking catalog pricing">
+  <name>Pricing Operation</name>
+  <uuid>a46935e0-5dc7-413d-bf2f-ab25a3d5da1b</uuid>
+  <referencedVariables variableName="customer" variableSetName="Parameters.var">
+    <variableSet href="../rules/Parameters.var#d2774d26-f5a0-494b-ac75-38803facb10e"/>
+  </referencedVariables>
+  <referencedVariables variableName="bundle" variableSetName="Parameters.var" direction="IN_OUT">
+    <variableSet href="../rules/Parameters.var#d2774d26-f5a0-494b-ac75-38803facb10e"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Pricing%20Process.rfl#7235b6f5-359e-41ca-a6fc-ef4f4cc17ccc"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="Pricing Operation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../Banking%20catalog%20pricing#54a74b99-c24c-4c55-8137-ebbf3c2b85d9"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

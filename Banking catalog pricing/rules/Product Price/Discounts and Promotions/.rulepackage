@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Discounts and Promotions</name>
+  <uuid>acfb0536-acce-43e8-9b0b-06e319e105b1</uuid>
+</ilog.rules.studio.model.base:RulePackage>

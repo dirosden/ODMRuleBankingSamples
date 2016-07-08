@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="TaxRuleset" usingRuleflow="true" ruleflowName="Taxation process" targetRuleProjectName="Banking Tax Rules">
+  <name>Tax Operation</name>
+  <uuid>1598c3cd-21c2-42d2-b104-6472a3952dbc</uuid>
+  <referencedVariables variableName="RESULT" variableSetName="Parameters.var" direction="OUT">
+    <variableSet href="../rules/Parameters.var#0f767172-7ac7-4e66-90b2-109b77555c57"/>
+  </referencedVariables>
+  <referencedVariables variableName="F1040EZ" variableSetName="Parameters.var">
+    <variableSet href="../rules/Parameters.var#0f767172-7ac7-4e66-90b2-109b77555c57"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Taxation%20process.rfl#2ce698dc-5f41-4ff2-a628-49eabe933178"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="Tax Operation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../Banking%20Tax%20Rules#e0e9a9f4-21ee-423c-9bce-a60a7089a17b"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

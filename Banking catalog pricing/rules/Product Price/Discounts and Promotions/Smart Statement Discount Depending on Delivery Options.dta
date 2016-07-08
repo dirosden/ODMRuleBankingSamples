@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Smart Statement Discount Depending on Delivery Options</name>
+  <uuid>7fdb8c0d-22e3-472c-8b78-c58257660a8d</uuid>
+  <locale>en_US</locale>
+  <definition>
+<DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
+  <Body>
+    <Properties>
+      <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+      <Property Name="UI.ShowLockIcon" Type="xs:boolean"><![CDATA[false]]></Property>
+      <Property Name="UI.ShowRuleView" Type="xs:boolean"><![CDATA[true]]></Property>
+    </Properties>
+    <Preconditions>
+      <Text><![CDATA[definitions 
+	set 'smartStatement' to a product in the products of 'the bundle' where the id of this product is Smart Statement ; ]]></Text>
+    </Preconditions>
+    <Structure>
+      <ConditionDefinitions>
+        <ConditionDefinition Id="C0">
+          <ExpressionDefinition>
+            <Text><![CDATA[the delivery frequency of smartStatement is <an object>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+        <ConditionDefinition Id="C1">
+          <ExpressionDefinition>
+            <Text><![CDATA[the delivery type of smartStatement is <an object>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+      </ConditionDefinitions>
+      <ActionDefinitions>
+        <ActionDefinition Id="A0">
+          <ExpressionDefinition>
+            <Text><![CDATA[apply to smartStatement a discount on catalog price of <discount> € for the reason <reason>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+      </ActionDefinitions>
+    </Structure>
+    <Contents>
+      <Partition DefId="C0">
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Bi-Monthly]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[Electronic]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA[5]]></Param>
+                    <Param><![CDATA["for Smart Statement with delivery options bimonthly and electronic"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Param><![CDATA[Paper]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA[5]]></Param>
+                    <Param><![CDATA["for Smart Statement with delivery options: bimonthly and pper"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Ten Days]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[Electronic]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA[3]]></Param>
+                    <Param><![CDATA["for Smart Statement with delivery options: 10 day and electronic"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Param><![CDATA[Paper]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA[2]]></Param>
+                    <Param><![CDATA["for Smart Statement with delivery options: 10 days and paper"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Daily]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[Electronic]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA[1]]></Param>
+                    <Param><![CDATA["for Smart Statement with delivery options: daily and electronic"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression/>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param/>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression/>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+      </Partition>
+    </Contents>
+  </Body>
+  <Resources DefaultLocale="en_US">
+    <ResourceSet Locale="en_US">
+      <Data Name="Definitions(A0)#HeaderText"><![CDATA[DISCOUNT]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[916]]></Data>
+      <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[EUROS]]></Data>
+      <Data Name="Definitions(A0)[1]#HeaderText"><![CDATA[REASON]]></Data>
+      <Data Name="Definitions(C0)#HeaderText"><![CDATA[DELIVERY FREQUENCY]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[220]]></Data>
+      <Data Name="Definitions(C1)#HeaderText"><![CDATA[DELIVERY TYPE]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[203]]></Data>
+    </ResourceSet>
+  </Resources>
+</DT></definition>
+</ilog.rules.studio.model.dt:DecisionTable>

@@ -1,0 +1,178 @@
+<b2x:translation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.ilog.com/JRules/1.1/Translation ilog/rules/schemas/1_1/b2x.xsd"
+        xmlns:b2x="http://schemas.ilog.com/JRules/1.1/Translation">
+    <id>10ffe410-73db-4dc5-a1ef-942c1dbd8962</id>
+    <class>
+        <businessName>CaseManagement</businessName>
+        <executionName>void</executionName>
+        <import>javax.mail.*</import>
+        <import>javax.mail.internet.*</import>
+        <import>java.util.*</import>
+        <import>javax.mail.SMTPTransport.*</import>
+        <import>java.io.*</import>
+        <import>java.net.InetAddress</import>
+        <import>com.sun.mail.smtp.*</import>
+        <method>
+            <name>CreateCase</name>
+            <parameter type="java.lang.String"/>
+            <parameter type="java.lang.String"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            System.out.println("### - Create case on ["+acct+"] with type ["+ctype+"] with reason = "+msg);
+return;
+            ]]></body>
+        </method>
+        <method>
+            <name>CreateSAR</name>
+            <parameter type="java.lang.String"/>
+            <parameter type="double"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            System.out.println("### - Create SAR on ["+accountID+"] where amount = "+amount);
+context.setParameterValue("reason_out", reason);
+return;
+            ]]></body>
+        </method>
+        <method>
+            <name>SendEmail</name>
+            <parameter type="java.lang.String"/>
+            <parameter type="java.lang.String"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            System.out.println("\n********************************************************"+
+				   "\n  EMAIL To: "+to+
+				   "\n   Subject:[Fraud demo] "+subject+
+				   "\n      Text: "+text+
+				   "\n********************************************************\n\n");
+return;
+            ]]></body>
+        </method>
+        <method>
+            <name>SendSMS</name>
+            <parameter type="java.lang.String"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            return;
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>CurrencyHelpers</businessName>
+        <executionName>void</executionName>
+        <method>
+            <name>convertTXNAmount</name>
+            <parameter type="com.ilog.fraud.TransactionType"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            // -- TODO -- Implement real conversion code here that does a lookup for current currency exchange rates
+return txn.TransAmount;
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>DateHelpers</businessName>
+        <executionName>void</executionName>
+        <method>
+            <name>dateWithinXDays</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="java.util.Date"/>
+            <parameter type="int"/>
+            <body language="irl"><![CDATA[
+            long diff = (date2.time - date1.time)/(1000 * 60*60*24);  // -- Millsecs to secs/mins/hours/days
+if (diff < 0 ) diff = -diff;
+
+if (diff < days)
+	return true;
+else 
+	return false;
+            ]]></body>
+        </method>
+        <method>
+            <name>dateWithinXHours</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="java.util.Date"/>
+            <parameter type="int"/>
+            <body language="irl"><![CDATA[
+            long diff = (date2.time - date1.time)/(1000 * 60*60);
+if (diff < 0 ) diff = -diff;
+
+if (diff < hours)
+	return true;
+else 
+	return false;
+            ]]></body>
+        </method>
+        <method>
+            <name>dateWithinXMinutes</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="java.util.Date"/>
+            <parameter type="int"/>
+            <body language="irl"><![CDATA[
+            long diff = (d2.time - d1.time)/(1000 * 60);  // -- Milli-secs to seconds to minutes
+if (diff < 0 ) diff = -diff;
+
+if (diff < mins)
+	return true;
+else 
+	return false;
+            ]]></body>
+        </method>
+        <method>
+            <name>dateWithinXMonths</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="java.util.Date"/>
+            <parameter type="int"/>
+            <body language="irl"><![CDATA[
+            long diff = (date2.time - date1.time)/(1000 * 60*60*24*30);
+if (diff < 0 ) diff = -diff;
+
+if (diff < months)
+	return true;
+else 
+	return false;
+            ]]></body>
+        </method>
+        <method>
+            <name>hourOfDay</name>
+            <parameter type="java.util.Date"/>
+            <body language="irl"><![CDATA[
+            return date.hours;
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>RuleHelpers</businessName>
+        <executionName>java.lang.Object</executionName>
+        <method>
+            <name>convertBooleanToString</name>
+            <parameter type="boolean"/>
+            <body language="irl"><![CDATA[
+            return Boolean.toString(mybool);
+            ]]></body>
+        </method>
+        <method>
+            <name>fraudTx</name>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            context.setParameterValue("fraud_out", true);
+context.setParameterValue("reason_out", "Fraud detected - " + reason);
+            ]]></body>
+        </method>
+        <method>
+            <name>invalidData</name>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            context.setParameterValue("validated", false);
+context.setParameterValue("reason_out", "Validation Failed - "+ reason);
+            ]]></body>
+        </method>
+        <method>
+            <name>rejectTx</name>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            context.setParameterValue("authorised_out", false);
+context.setParameterValue("reason_out", "Authentication failed - " + reason);
+            ]]></body>
+        </method>
+    </class>
+</b2x:translation>

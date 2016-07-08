@@ -1,0 +1,42 @@
+# Vocabulary Properties
+uuid = c96b0421-093c-4d43-925c-a2b9624647e3
+
+# eztax.F1040Ez
+eztax.F1040Ez#concept.label = F1040 ez
+eztax.F1040Ez.address#phrase.navigation = {address} of {this}
+eztax.F1040Ez.adjustedGrossIncome#phrase.navigation = {adjusted gross income} of {this}
+eztax.F1040Ez.apartment#phrase.navigation = {apartment} of {this}
+eztax.F1040Ez.cityStateZip#phrase.navigation = {city state zip} of {this}
+eztax.F1040Ez.combatPayElections#phrase.navigation = {combat pay elections} of {this}
+eztax.F1040Ez.earnedIncomeCredit#phrase.navigation = {earned income credit} of {this}
+eztax.F1040Ez.federalIncomeTaxWitheld#phrase.navigation = {federal income tax witheld} of {this}
+eztax.F1040Ez.firstName#phrase.navigation = {first name} of {this}
+eztax.F1040Ez.lastName#phrase.navigation = {last name} of {this}
+eztax.F1040Ez.spouseLastName#phrase.navigation = {spouse last name} of {this}
+eztax.F1040Ez.spouseSsn#phrase.navigation = {spouse ssn} of {this}
+eztax.F1040Ez.spousefirstName#phrase.navigation = {spousefirst name} of {this}
+eztax.F1040Ez.ssn#phrase.navigation = {ssn} of {this}
+eztax.F1040Ez.taxAllowance#phrase.action = set the tax allowance of {this} to {tax allowance}
+eztax.F1040Ez.taxAllowance#phrase.navigation = {tax allowance} of {this}
+eztax.F1040Ez.taxableIncome#phrase.action = set the taxable income of {this} to {taxable income}
+eztax.F1040Ez.taxableIncome#phrase.navigation = {taxable income} of {this}
+eztax.F1040Ez.taxableInterest#phrase.action = set the taxable interest of {this} to {taxable interest}
+eztax.F1040Ez.taxableInterest#phrase.navigation = {taxable interest} of {this}
+eztax.F1040Ez.totalPayments#phrase.action = set the total payments of {this} to {total payments}
+eztax.F1040Ez.totalPayments#phrase.navigation = {total payments} of {this}
+eztax.F1040Ez.unemploymentCompensation#phrase.action = set the unemployment compensation of {this} to {unemployment compensation}
+eztax.F1040Ez.unemploymentCompensation#phrase.navigation = {unemployment compensation} of {this}
+eztax.F1040Ez.wagesSalariesTips#phrase.action = set the wages salaries tips of {this} to {wages salaries tips}
+eztax.F1040Ez.wagesSalariesTips#phrase.navigation = {wages salaries tips} of {this}
+
+# eztax.F1040EzResult
+eztax.F1040EzResult#concept.label = F1040 ez result
+eztax.F1040EzResult.addErrorMessage(java.lang.String)#phrase.action = error message: {0}
+eztax.F1040EzResult.addInvalidForm(java.lang.String)#phrase.action = invalid form because {0}
+eztax.F1040EzResult.addToMessagesList(java.lang.String)#phrase.action = add message {0}
+eztax.F1040EzResult.messagesList#phrase.action = set the messages of {this} to {message}
+eztax.F1040EzResult.messagesList#phrase.navigation = {message} of {this}
+eztax.F1040EzResult.statusCode#phrase.action = application status: {status code}
+eztax.F1040EzResult.statusCode#phrase.navigation = {status code} of {this}
+eztax.F1040EzResult.taxDue#phrase.action = tax due = {tax due}
+eztax.F1040EzResult.taxDue#phrase.navigation = {tax due} of {this}

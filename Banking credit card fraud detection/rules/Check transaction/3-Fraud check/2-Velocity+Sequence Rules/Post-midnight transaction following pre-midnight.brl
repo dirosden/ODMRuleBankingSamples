@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Post-midnight transaction following pre-midnight</name>
+  <uuid>4644d037-c67a-4fa1-a719-7064e6bef7f0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+	set 'txn' to a Transaction in the recent transactions of 'TXN Data' 
+		where the hour of the day of the date/time of this Transaction is 23 
+			and the MCC of this Transaction is "6011" ;
+if
+	the hour of the day of the date/time of TXN is 0 
+	and the MCC of TXN is "6011" 
+	and the date/time of TXN is within 2 hours of the date/time of txn 
+then
+	mark transaction as fraud with reason "Two ATM transactions either side of midnight" ;]]></definition>
+  <status>deployable</status>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="ruleOrder"/>
+  </eAnnotations>
+  <name>1-Validate attributes</name>
+  <uuid>35d9815d-97f1-4326-aeb8-0bac3abee592</uuid>
+  <documentation><![CDATA[This package assumes the Data Validation will succeed so add rules to check for invalid data and set the 'validated' variable to 'false' to stop the other rule tasks executing. You should also set the 'reason' field with a short message describing the error.]]></documentation>
+</ilog.rules.studio.model.base:RulePackage>

@@ -1,0 +1,28 @@
+# Vocabulary Properties
+uuid = a69471c6-e1a4-43e3-82a1-31894a11e9fe
+
+# CaseManagement
+CaseManagement#concept.label = case management
+CaseManagement.CreateCase(java.lang.String,java.lang.String,java.lang.String)#phrase.action = Create a case on {0, account} of type {1, type} with reason {2}
+CaseManagement.CreateSAR(java.lang.String,double,java.lang.String)#phrase.action = Create a Suspicious Activity Report [{0, account}, {1, amount}] with reason {2}
+CaseManagement.SendEmail(java.lang.String,java.lang.String,java.lang.String)#phrase.action = Send Email To:{0, <address>} Subject: {1, <text>} Message: {2, <message>}
+CaseManagement.SendSMS(java.lang.String,java.lang.String)#phrase.action = Send SMS message:{0} to mobile: {1, mobile number}
+
+# CurrencyHelpers
+CurrencyHelpers#concept.label = currency helpers
+CurrencyHelpers.convertTXNAmount(com.ilog.fraud.TransactionType,java.lang.String)#phrase.navigation = the amount of {0} in {1, <currcode>}
+
+# DateHelpers
+DateHelpers#concept.label = date helpers
+DateHelpers.dateWithinXDays(java.util.Date,java.util.Date,int)#phrase.navigation = {0} is within {2} days of {1}
+DateHelpers.dateWithinXHours(java.util.Date,java.util.Date,int)#phrase.navigation = {0} is within {2} hours of {1}
+DateHelpers.dateWithinXMinutes(java.util.Date,java.util.Date,int)#phrase.navigation = {0} is within {2} minutes of {1}
+DateHelpers.dateWithinXMonths(java.util.Date,java.util.Date,int)#phrase.navigation = {0} is within {2} months of {1}
+DateHelpers.hourOfDay(java.util.Date)#phrase.navigation = the hour of the day of {0}
+
+# RuleHelpers
+RuleHelpers#concept.label = variable helpers
+RuleHelpers.convertBooleanToString(boolean)#phrase.navigation = the string of {0}
+RuleHelpers.fraudTx(java.lang.String)#phrase.action = mark transaction as fraud with reason {0}
+RuleHelpers.invalidData(java.lang.String)#phrase.action = mark data as invalid with reason {0}
+RuleHelpers.rejectTx(java.lang.String)#phrase.action = reject transaction with reason {0}

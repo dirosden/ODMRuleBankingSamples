@@ -1,0 +1,33 @@
+
+property uuid "9c2531f0-af84-4ef6-8632-af66ec14dea4"
+
+public class CaseManagement
+{
+    public static final void CreateCase(string acct, string ctype, string msg);
+    public static final void CreateSAR(string accountID, double amount, string reason);
+    public static final void SendEmail(string to, string subject, string text);
+    public static final void SendSMS(string message, string mobile);
+}
+
+public class CurrencyHelpers
+{
+    public static final double convertTXNAmount(com.ilog.fraud.TransactionType txn, string currency);
+}
+
+public class DateHelpers
+{
+    public static final boolean dateWithinXDays(java.util.Date date1, java.util.Date date2, int days);
+    public static final boolean dateWithinXHours(java.util.Date date1, java.util.Date date2, int hours);
+    public static final boolean dateWithinXMinutes(java.util.Date d1, java.util.Date d2, int mins);
+    public static final boolean dateWithinXMonths(java.util.Date date1, java.util.Date date2, int months);
+    public static final int hourOfDay(java.util.Date date);
+}
+
+public class RuleHelpers
+{
+    public static string convertBooleanToString(boolean mybool);
+    public static void fraudTx(string reason);
+    public static void invalidData(string reason);
+    public static void rejectTx(string reason);
+}
+

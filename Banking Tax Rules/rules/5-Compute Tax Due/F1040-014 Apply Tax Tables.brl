@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>F1040-014 Apply Tax Tables</name>
+  <uuid>29359946-04b8-41bf-9b4d-fd31f7a73339</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+	tax due = ( 'Tax Percentage' / 100 ) * ( the taxable income of F1040EZ - 'Tax Threshold' ) + 'Tax Base Amount' ;
+	application status: "STATUS TAX CALCULATED" ; ]]></definition>
+</model.brl:ActionRule>

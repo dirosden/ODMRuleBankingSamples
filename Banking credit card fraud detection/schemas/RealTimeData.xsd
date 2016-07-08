@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	targetNamespace="http://www.ilog.com/fraud" 
+	xmlns="http://www.ilog.com/fraud" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	elementFormDefault="unqualified" attributeFormDefault="unqualified">
+
+	<xsd:element name="RealTimeCheckData">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="CardHolderFullName" type="xsd:string"/>
+				<xsd:element name="CardHolderMonthlyAverage" type="xsd:double"/>
+				<xsd:element name="CardHolderLimit" type="xsd:double"/>
+				<xsd:element name="CardHolderBalance" type="xsd:double"/>
+				<xsd:element name="CardType" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>visa, mastercard, maestro etc.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="CardIssueDate" type="xsd:date"/>
+				<xsd:element name="ValidFrom" type="xsd:date"/>
+				<xsd:element name="ValidTo" type="xsd:date"/>
+				<xsd:element name="SecurityID" type="xsd:dateTime"/>
+				<xsd:element name="CurrentTransaction" type="TransactionType">
+					<xsd:annotation>
+						<xsd:documentation>Details of a Credit Card Transaction</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="RecentTransactions" type="TransactionType" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>A list of recent transactions by the cardholder</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="TransactionType">
+		<xsd:sequence>
+			<xsd:element name="TransID" type="xsd:string"/>
+			<xsd:element name="TransDateTime" type="xsd:dateTime"/>
+			<xsd:element name="CardHolderID" type="xsd:string"/>
+			<xsd:element name="TransAmount" type="xsd:double"/>
+			<xsd:element name="CurrencyCode">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="CAD"/>  <!-- Canada $ -->
+						<xsd:enumeration value="EUR"/>  <!-- Euro -->
+						<xsd:enumeration value="GBP"/>  <!-- GB Pound -->
+						<xsd:enumeration value="USD"/>  <!-- US $ -->
+						<xsd:enumeration value="CHF"/>  <!-- Switzerland -->
+						<xsd:enumeration value="JPY"/>  <!-- Japan -->
+						<xsd:enumeration value="AUD"/>  <!-- Australia -->
+						<xsd:enumeration value="SGD"/>  <!-- Singapore -->
+						<xsd:enumeration value="INR"/>  <!-- India -->
+						<xsd:enumeration value="NZD"/>  <!-- New Zealand -->
+						<xsd:enumeration value="ZAR"/>  <!-- South Africa -->
+						<xsd:enumeration value="CNY"/>  <!-- China -->
+						<xsd:enumeration value="CZK"/>  <!-- Czech Republic -->
+						<xsd:enumeration value="HKD"/>  <!-- Hong Kong -->
+						<xsd:enumeration value="ISK"/>  <!-- Iceland -->
+						<xsd:enumeration value="NOK"/>  <!-- Norway -->
+						<xsd:enumeration value="RUB"/>  <!-- Russia -->
+						<xsd:enumeration value="PLN"/>  <!-- Poland -->
+						<xsd:enumeration value="THB"/>  <!-- Thailand -->
+						<xsd:enumeration value="TRY"/>  <!-- Turkey -->
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="MerchantID" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>6 digit codes usually</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MerchantCC" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Category Code - 4 digit numberic code from Visa list</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MerchantCountry" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Country Code - 3 Digit numeric code e.g. 584, 638</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="POSEntryCode">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="Other"/>
+						<xsd:enumeration value="Keyed"/>
+						<xsd:enumeration value="Swiped"/>
+						<xsd:enumeration value="Chip+Pin"/>
+						<xsd:enumeration value="Web"/>
+						<xsd:enumeration value="Telephone"/>
+						<xsd:enumeration value="Email"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="SICCode" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Standard industry code usually 6011, 6012</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PurchaseDescription" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

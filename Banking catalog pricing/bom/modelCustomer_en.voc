@@ -1,0 +1,10 @@
+# Vocabulary Properties
+uuid = 87e9e004-b890-416e-996f-560ec9627a7d
+
+# com.ibm.bisc.customer.Customer
+com.ibm.bisc.customer.Customer#concept.label = customer
+com.ibm.bisc.customer.Customer.age#phrase.navigation = {age} of {this}
+com.ibm.bisc.customer.Customer.name#phrase.navigation = {name} of {this}
+com.ibm.bisc.customer.Customer.segment#phrase.navigation = {segment} of {this}
+com.ibm.bisc.customer.Customer.value#phrase.navigation = {value} of {this}
+com.ibm.bisc.customer.Customer.volume#phrase.navigation = {volume} of {this}

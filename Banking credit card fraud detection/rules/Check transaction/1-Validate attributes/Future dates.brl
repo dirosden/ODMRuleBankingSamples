@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Future dates</name>
+  <uuid>f2ac771b-d762-4ea7-9894-ed42fdd4664c</uuid>
+  <categories>any</categories>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the date/time of TXN is after today 
+then
+	mark data as invalid with reason "Transaction date is in the future" ;
+]]></definition>
+  <status>deployable</status>
+</ilog.rules.studio.model.brl:ActionRule>

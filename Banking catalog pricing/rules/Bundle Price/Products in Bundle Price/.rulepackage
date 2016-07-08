@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Products in Bundle Price</name>
+  <uuid>3c58b0ef-d95e-4988-bd3d-68b35b7a975f</uuid>
+</ilog.rules.studio.model.base:RulePackage>

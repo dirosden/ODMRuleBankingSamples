@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>F1040-001 Thank you</name>
+  <uuid>a88f546d-5856-4f41-ba86-278bee7b4d71</uuid>
+  <documentation><![CDATA[TODO - this is a note.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+	add message "Thank you for your submission" ;]]></definition>
+</model.brl:ActionRule>

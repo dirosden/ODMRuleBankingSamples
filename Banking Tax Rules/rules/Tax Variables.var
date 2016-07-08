@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Tax Variables</name>
+  <uuid>a4cd6ab5-9b0d-4de7-951c-434bed7d5b93</uuid>
+  <variables name="TaxBaseAmount" type="double" initialValue="1" verbalization="Tax Base Amount"/>
+  <variables name="TaxPercentage" type="double" initialValue="1" verbalization="Tax Percentage"/>
+  <variables name="TaxThreshold" type="double" initialValue="1" verbalization="Tax Threshold"/>
+</model.base:VariableSet>

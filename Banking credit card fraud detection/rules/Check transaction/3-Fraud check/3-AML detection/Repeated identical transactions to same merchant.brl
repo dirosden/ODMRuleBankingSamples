@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Repeated identical transactions to same merchant</name>
+  <uuid>77f83fa6-2594-4ed2-b4f0-f4c0fc0eafdd</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'txn' to a Transaction in the recent transactions of 'TXN Data' ;
+if
+    the number of Transactions
+            where the amount in CAN$ of txn equals the amount in CAN$ of TXN
+            and the merchant ID of txn is the merchant ID of TXN , is at least 4
+then
+    Create a Suspicious Activity Report [ the card holder ID of TXN , the amount in CAN$ of TXN ] with reason "";
+    mark transaction as fraud with reason "SAR generated as this is one of at least 4 identical transactions";]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

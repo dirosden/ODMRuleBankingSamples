@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Parameters</name>
+  <uuid>c409aa00-78bd-4974-9c96-e0bfaa94d54a</uuid>
+  <variables name="transaction_in" type="com.ilog.fraud.RealTimeCheckData" initialValue="" verbalization="TXN Data"/>
+  <variables name="fraud_out" type="boolean" initialValue="false" verbalization="fraudulent"/>
+  <variables name="reason_out" type="java.lang.String" initialValue="" verbalization="reason"/>
+  <variables name="authorised_out" type="boolean" initialValue="false" verbalization="authorised"/>
+</ilog.rules.studio.model.base:VariableSet>

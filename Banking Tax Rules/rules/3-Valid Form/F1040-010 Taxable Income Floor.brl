@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="historyVersion" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="9 Sep 2005 15:43:45 GMT"/>
+    <details key="lastModificationDate" value="9 Sep 2005 16:12:09 GMT"/>
+  </eAnnotations>
+  <name>F1040-010 Taxable Income Floor</name>
+  <uuid>3c6c8226-f878-40cc-a878-d07e0c5ca313</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the adjusted gross income of F1040EZ is less than the tax allowance of F1040EZ 
+	and the taxable income of F1040EZ does not equal 0 
+then
+	error message: "Taxable income is incorrectly calculated. It should never be negative." ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

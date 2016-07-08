@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>TXN amount less than zero</name>
+  <uuid>c5f726d2-c5f6-4b84-ae4e-a297293057d9</uuid>
+  <categories>any</categories>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the amount of TXN is less than 0 
+then
+	mark data as invalid with reason "TXN amount is < 0" ;]]></definition>
+  <status>deployable</status>
+</ilog.rules.studio.model.brl:ActionRule>

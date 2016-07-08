@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Parameters</name>
+  <uuid>0f767172-7ac7-4e66-90b2-109b77555c57</uuid>
+  <variables name="RESULT" type="eztax.F1040EzResult" initialValue="new eztax.F1040EzResult()" verbalization="RESULT"/>
+  <variables name="F1040EZ" type="eztax.F1040Ez" initialValue="" verbalization="F1040EZ"/>
+</ilog.rules.studio.model.base:VariableSet>

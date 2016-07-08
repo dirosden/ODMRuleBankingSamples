@@ -1,0 +1,55 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/Banking Tax Rules//Banking Tax Rules/eztax.xsd"
+property uuid "8bdade42-cd3d-4cb8-b514-490b3310e040"
+package eztax;
+
+
+public class F1040Ez
+        extends ilog.rules.xml.IlrXmlObject
+{
+    public string address domain 0,1;
+    public double adjustedGrossIncome domain 0,1;
+    public string apartment domain 0,1;
+    public string cityStateZip domain 0,1;
+    public double combatPayElections domain 0,1;
+    public double earnedIncomeCredit domain 0,1;
+    public double federalIncomeTaxWitheld domain 0,1;
+    public string firstName domain 0,1;
+    public string lastName domain 0,1;
+    public string spouseLastName domain 0,1;
+    public string spouseSsn domain 0,1;
+    public string spousefirstName domain 0,1;
+    public string ssn domain 0,1;
+    public double taxAllowance domain 0,1;
+    public double taxableIncome domain 0,1;
+    public double taxableInterest domain 0,1;
+    public double totalPayments domain 0,1;
+    public double unemploymentCompensation domain 0,1;
+    public double wagesSalariesTips domain 0,1;
+    public F1040Ez();
+    public void setUnknownAdjustedGrossIncome();
+    public void setUnknownCombatPayElections();
+    public void setUnknownEarnedIncomeCredit();
+    public void setUnknownFederalIncomeTaxWitheld();
+    public void setUnknownTaxAllowance();
+    public void setUnknownTaxableIncome();
+    public void setUnknownTaxableInterest();
+    public void setUnknownTotalPayments();
+    public void setUnknownUnemploymentCompensation();
+    public void setUnknownWagesSalariesTips();
+}
+
+public class F1040EzResult
+        extends ilog.rules.xml.IlrXmlObject
+{
+    public java.util.Vector messagesList domain 0,* class string;
+    public string statusCode ="STATUS TAX CALCULATED" domain (0,1, {"STATUS WRONG FORM", "STATUS ERRORS", "STATUS TAX CALCULATED"});
+    public double taxDue domain 0,1;
+    public F1040EzResult();
+    public void addErrorMessage(string error);
+    public void addInvalidForm(string error);
+    public void addToMessagesList(string argument);
+    public void setUnknownTaxDue();
+}
+

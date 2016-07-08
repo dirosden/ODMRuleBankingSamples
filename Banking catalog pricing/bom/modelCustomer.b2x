@@ -1,0 +1,14 @@
+<b2x:translation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.ilog.com/JRules/1.1/Translation ilog/rules/schemas/1_1/b2x.xsd"
+        xmlns:b2x="http://schemas.ilog.com/JRules/1.1/Translation">
+    <id>2131d5bd-6080-49b4-9c5b-a39b9faa25b1</id>
+    <class>
+        <businessName>com.ibm.bisc.customer.Customer</businessName>
+        <attribute>
+            <name>volume</name>
+            <getter language="irl"><![CDATA[
+            return 0;
+            ]]></getter>
+        </attribute>
+    </class>
+</b2x:translation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="ilog.rules.studio.dvs.ds.launchConfiguration">
+<booleanAttribute key="EXECUTION_DURATION" value="false"/>
+<booleanAttribute key="LIST_OF_ALL_RULES" value="false"/>
+<booleanAttribute key="LIST_OF_ALL_TASKS" value="false"/>
+<booleanAttribute key="LIST_OF_RULES_FIRED" value="false"/>
+<booleanAttribute key="LIST_OF_RULES_NOT_FIRED" value="false"/>
+<booleanAttribute key="LIST_OF_TASKS_EXECUTED" value="false"/>
+<booleanAttribute key="LIST_OF_TASKS_NOT_EXECUTED" value="false"/>
+<booleanAttribute key="NUMBER_OF_RULES_FIRED" value="false"/>
+<booleanAttribute key="NUMBER_OF_RULES_NOT_FIRED" value="false"/>
+<booleanAttribute key="NUMBER_OF_TASKS_EXECUTED" value="false"/>
+<booleanAttribute key="NUMBER_OF_TASKS_NOT_EXECUTED" value="false"/>
+<stringAttribute key="com.ibm.rules.studio.decisionservice.ui.OPERATION_PATH" value="/Banking Tax Rules/deployment/Tax Operation"/>
+<stringAttribute key="ilog.rules.studio.dvs.DEST_FILE" value="/Banking Tax Rules/report.html"/>
+<stringAttribute key="ilog.rules.studio.dvs.EXCEL_FILE" value="/Banking Tax Rules/scenarios/forms.xlsx"/>
+<booleanAttribute key="ilog.rules.studio.dvs.GENERATE_OUTPUT_FILE" value="false"/>
+<stringAttribute key="ilog.rules.studio.dvs.OUTPUT_FILE_LOCATION" value=""/>
+<stringAttribute key="ilog.rules.studio.dvs.PRECISION" value="2"/>
+<stringAttribute key="ilog.rules.studio.dvs.RULE_PROJECT" value="Banking Tax Rules"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="com.ibm.rules.studio.dvs.ui.dvsClasspathProviderId"/>
+</launchConfiguration>

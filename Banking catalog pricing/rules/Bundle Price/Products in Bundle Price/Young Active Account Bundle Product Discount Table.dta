@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Young Active Account Bundle Product Discount Table</name>
+  <uuid>05da3911-ff57-48b5-a365-eeaefebb0e82</uuid>
+  <documentation><![CDATA[BUNDLE_ID=Young Active Account]]></documentation>
+  <locale>en_US</locale>
+  <definition>
+<DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
+  <Body>
+    <Properties>
+      <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+    </Properties>
+    <Preconditions>
+      <Text><![CDATA[definitions 
+	set prodcut to a product in the products of 'the bundle' ; ]]></Text>
+    </Preconditions>
+    <Structure>
+      <ConditionDefinitions>
+        <ConditionDefinition Id="C0">
+          <ExpressionDefinition>
+            <Text><![CDATA[the id of prodcut is <an object>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+        <ConditionDefinition Id="C1">
+          <ExpressionDefinition>
+            <Text><![CDATA[the card type of prodcut is <an object>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+      </ConditionDefinitions>
+      <ActionDefinitions>
+        <ActionDefinition Id="A0">
+          <ExpressionDefinition>
+            <Text><![CDATA[apply to prodcut a discount of <discount> % for the reason <reason>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+      </ActionDefinitions>
+    </Structure>
+    <Contents>
+      <Partition DefId="C0">
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Smart Account]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0" Enabled="false">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Smart Card]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[Debit Card]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA[100]]></Param>
+                    <Param><![CDATA["Debit card product is free in Young Active Account bundle"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Param><![CDATA[Credit Classic]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA[100]]></Param>
+                    <Param><![CDATA["Credit Classic product is free in Young Active Account bundle"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Param><![CDATA[Credit Gold]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA[66.66]]></Param>
+                    <Param><![CDATA["Credit Gold product has 66.66% discount in Young Active Account bundle"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Smart Internet Banking]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0">
+              <Expression>
+                <Param><![CDATA[100]]></Param>
+                <Param><![CDATA["Internet Banking is free in Young Active Account bundle"]]></Param>
+              </Expression>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Smart Notification]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0">
+              <Expression>
+                <Param><![CDATA[55.55]]></Param>
+                <Param><![CDATA["Notification service has 55.55% discount in Young Active Acoount bundle"]]></Param>
+              </Expression>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Smart Bill Payment]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0">
+              <Expression>
+                <Param><![CDATA[100]]></Param>
+                <Param><![CDATA["Smart Bill Payment is free when included in Young Active Account bundle"]]></Param>
+              </Expression>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression/>
+          <ActionSet>
+            <Action DefId="A0">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+      </Partition>
+    </Contents>
+  </Body>
+  <Resources DefaultLocale="en_US">
+    <ResourceSet Locale="en_US">
+      <Data Name="Definitions(A0)#HeaderText"><![CDATA[DISCOUNT]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[691]]></Data>
+      <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[%]]></Data>
+      <Data Name="Definitions(A0)[1]#HeaderText"><![CDATA[REASON]]></Data>
+      <Data Name="Definitions(C0)#HeaderText"><![CDATA[PRODUCT]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[315]]></Data>
+      <Data Name="Definitions(C1)#HeaderText"><![CDATA[CARD TYPE]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[335]]></Data>
+    </ResourceSet>
+  </Resources>
+</DT></definition>
+</ilog.rules.studio.model.dt:DecisionTable>

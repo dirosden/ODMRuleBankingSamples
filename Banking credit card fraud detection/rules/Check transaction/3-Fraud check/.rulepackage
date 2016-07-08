@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>3-Fraud check</name>
+  <uuid>68b103b3-5c6f-483f-9766-155c8275e997</uuid>
+</ilog.rules.studio.model.base:RulePackage>

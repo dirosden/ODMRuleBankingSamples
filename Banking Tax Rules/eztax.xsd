@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="eztax"
+	xmlns:tns="eztax" elementFormDefault="qualified">
+	
+	<element name="f1040Ez" type="tns:F1040Ez"></element>
+	
+	<complexType name="F1040Ez">
+		<sequence>
+			<element name="firstName" type="string" minOccurs="0" />
+			<element name="lastName" type="string" minOccurs="0" />
+            <element name="spousefirstName" type="string" minOccurs="0" />
+            <element name="spouseLastName" type="string" minOccurs="0" />
+            <element name="address" type="string" minOccurs="0" />
+            <element name="apartment" type="string" minOccurs="0" />
+            <element name="cityStateZip" type="string" minOccurs="0" />
+            <element name="ssn" type="string" minOccurs="0" />
+            <element name="spouseSsn" type="string" minOccurs="0" />
+	        <element name="wagesSalariesTips" type="double" minOccurs="0" />
+	        <element name="taxableInterest" type="double" minOccurs="0" />
+	        <element name="unemploymentCompensation" type="double" minOccurs="0" />
+	        <element name="adjustedGrossIncome" type="double" minOccurs="0" />
+	        <element name="taxAllowance" type="double" minOccurs="0" />
+	        <element name="taxableIncome" type="double" minOccurs="0" />
+	        <element name="federalIncomeTaxWitheld" type="double" minOccurs="0" />
+	        <element name="earnedIncomeCredit" type="double" minOccurs="0" />
+	        <element name="combatPayElections" type="double" minOccurs="0" />
+	        <element name="totalPayments" type="double" minOccurs="0" />
+		</sequence>
+	</complexType>
+
+	<element name="f1040EzResult" type="tns:F1040EzResult"></element>
+	
+	<complexType name="F1040EzResult">
+		<sequence>
+			<element name="messages" type="string" minOccurs="0" maxOccurs="unbounded" />
+			<element name="taxDue" type="double" minOccurs="0" />
+			<element name="statusCode"  default="STATUS TAX CALCULATED" minOccurs="0">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="STATUS WRONG FORM"/>
+						<enumeration value="STATUS ERRORS"/>
+						<enumeration value="STATUS TAX CALCULATED"/>
+					</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+	</complexType>	
+</schema>

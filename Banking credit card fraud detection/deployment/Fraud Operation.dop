@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="FraudRuleset" usingRuleflow="true" ruleflowName="Main RuleFlow" targetRuleProjectName="Banking credit card fraud">
+  <name>Fraud Operation</name>
+  <uuid>1173bd5a-28a1-44f0-8a9a-dd5b5e79fc1e</uuid>
+  <referencedVariables variableName="transaction_in" variableSetName="Parameters.var">
+    <variableSet href="../rules/Parameters.var#c409aa00-78bd-4974-9c96-e0bfaa94d54a"/>
+  </referencedVariables>
+  <referencedVariables variableName="fraud_out" variableSetName="Parameters.var" direction="OUT">
+    <variableSet href="../rules/Parameters.var#c409aa00-78bd-4974-9c96-e0bfaa94d54a"/>
+  </referencedVariables>
+  <referencedVariables variableName="reason_out" variableSetName="Parameters.var" direction="OUT">
+    <variableSet href="../rules/Parameters.var#c409aa00-78bd-4974-9c96-e0bfaa94d54a"/>
+  </referencedVariables>
+  <referencedVariables variableName="authorised_out" variableSetName="Parameters.var" direction="OUT">
+    <variableSet href="../rules/Parameters.var#c409aa00-78bd-4974-9c96-e0bfaa94d54a"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Main%20RuleFlow.rfl#1c53b1ed-90b8-43e6-af0b-b131c91f60d5"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="Fraud Operation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../Banking%20credit%20card%20fraud#38b9970d-fc7d-48a0-b398-10948db1f056"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

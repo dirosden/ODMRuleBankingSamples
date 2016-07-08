@@ -1,0 +1,64 @@
+# Vocabulary Properties
+uuid = 5adb816e-b99d-4985-aebf-de1f8ab0237d
+
+# Term: MCC
+@MCC#gender = NEUTRAL
+
+# Term: POS Method
+@POS\ Method#gender = NEUTRAL
+
+# Term: Transaction
+@Transaction#gender = NEUTRAL
+
+# Term: amount
+@amount#gender = NEUTRAL
+
+# Term: country
+@country#gender = NEUTRAL
+
+# Term: date/time
+@date/time#gender = NEUTRAL
+
+# com.ilog.fraud.RealTimeCheckData
+com.ilog.fraud.RealTimeCheckData#concept.label = Account and TXN data
+com.ilog.fraud.RealTimeCheckData.CardHolderBalance#phrase.navigation = {card holder balance} of {this}
+com.ilog.fraud.RealTimeCheckData.CardHolderFullName#phrase.navigation = {card holder full name} of {this}
+com.ilog.fraud.RealTimeCheckData.CardHolderLimit#phrase.navigation = {card holder limit} of {this}
+com.ilog.fraud.RealTimeCheckData.CardHolderMonthlyAverage#phrase.navigation = {card holder monthly average} of {this}
+com.ilog.fraud.RealTimeCheckData.CardIssueDate#phrase.navigation = {card issue date} of {this}
+com.ilog.fraud.RealTimeCheckData.CardType#phrase.navigation = {card type} of {this}
+com.ilog.fraud.RealTimeCheckData.CurrentTransaction#phrase.navigation = {current transaction} of {this}
+com.ilog.fraud.RealTimeCheckData.RecentTransactionsList#phrase.navigation = {recent transaction} of {this}
+com.ilog.fraud.RealTimeCheckData.SecurityID#phrase.navigation = {security ID} of {this}
+com.ilog.fraud.RealTimeCheckData.ValidFrom#phrase.navigation = {valid from} of {this}
+com.ilog.fraud.RealTimeCheckData.ValidTo#phrase.navigation = {valid to} of {this}
+com.ilog.fraud.RealTimeCheckData.b2xKYCStatus()#phrase.navigation = the KYC status of the account holder
+
+# com.ilog.fraud.TransactionType
+com.ilog.fraud.TransactionType#concept.label = Transaction
+com.ilog.fraud.TransactionType.CardHolderID#phrase.navigation = {card holder ID} of {this}
+com.ilog.fraud.TransactionType.CurrencyCode#phrase.navigation = {currency code} of {this}
+
+# com.ilog.fraud.TransactionType.CurrencyCodeType
+com.ilog.fraud.TransactionType.CurrencyCodeType#concept.label = currency code type
+com.ilog.fraud.TransactionType.MerchantCC#phrase.navigation = {MCC} of {this}
+com.ilog.fraud.TransactionType.MerchantCountry#phrase.navigation = {country} of {this}
+com.ilog.fraud.TransactionType.MerchantID#phrase.navigation = {merchant ID} of {this}
+com.ilog.fraud.TransactionType.POSEntryCode#phrase.navigation = {POS Method} of {this}
+
+# com.ilog.fraud.TransactionType.POSEntryCodeType
+com.ilog.fraud.TransactionType.POSEntryCodeType#concept.label = POSEntry code type
+com.ilog.fraud.TransactionType.POSEntryCodeType.getEnumerations()#phrase.navigation = the enumeration
+com.ilog.fraud.TransactionType.POSEntryCodeType.getLength()#phrase.navigation = the length
+com.ilog.fraud.TransactionType.POSEntryCodeType.getMaxLength()#phrase.navigation = the max length
+com.ilog.fraud.TransactionType.POSEntryCodeType.getMinLength()#phrase.navigation = the min length
+com.ilog.fraud.TransactionType.POSEntryCodeType.getPattern()#phrase.navigation = the pattern
+com.ilog.fraud.TransactionType.PurchaseDescription#phrase.navigation = {purchase description} of {this}
+com.ilog.fraud.TransactionType.SICCode#phrase.navigation = {SICCode} of {this}
+com.ilog.fraud.TransactionType.TransAmount#phrase.navigation = {amount} of {this}
+com.ilog.fraud.TransactionType.TransAmountCAD()#phrase.navigation = the amount in CAN$ of {this}
+com.ilog.fraud.TransactionType.TransAmountEuro()#phrase.navigation = the amount in € of {this}
+com.ilog.fraud.TransactionType.TransAmountGBP()#phrase.navigation = the amount in £ of {this}
+com.ilog.fraud.TransactionType.TransAmountUSD()#phrase.navigation = the amount in US$ of {this}
+com.ilog.fraud.TransactionType.TransDateTime#phrase.navigation = {date/time} of {this}
+com.ilog.fraud.TransactionType.TransID#phrase.navigation = {trans ID} of {this}

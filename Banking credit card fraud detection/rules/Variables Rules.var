@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Variables Rules</name>
+  <uuid>800c929f-fbf7-403f-a75b-1d11ff7af591</uuid>
+  <variables name="validated" type="boolean" initialValue="true" verbalization="data validated"/>
+  <variables name="today" type="java.util.Date" initialValue="new java.util.Date()" verbalization="today"/>
+  <variables name="currtrans" type="com.ilog.fraud.TransactionType" initialValue="" verbalization="TXN"/>
+  <variables name="recenttrans" type="java.util.Collection" initialValue="" verbalization="the recent transactions"/>
+</ilog.rules.studio.model.base:VariableSet>

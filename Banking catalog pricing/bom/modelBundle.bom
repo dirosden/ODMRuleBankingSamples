@@ -1,0 +1,111 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/Banking catalog pricing//Banking catalog pricing/xml/Bundle.xsd"
+property uuid "3e7e124b-ceb3-4a88-bc00-f5bad15932e6"
+package com.ibm.bisc.bundle;
+
+
+public class Bundle
+        extends ilog.rules.xml.IlrXmlObject
+{
+    public boolean applySpecialDiscount;
+    public readonly com.ibm.bisc.bundle.BundleIdType bundleId;
+    public float catalogPrice;
+    public java.util.Vector messageDiscountListList domain 0,* class string
+                property "factory.ignore" "true";
+    public string name;
+    public double negotiatedDiscount;
+    public double negotiatedPrice;
+    public double negotiationMaxMargin;
+    public java.util.Vector productList domain 0,* class com.ibm.bisc.bundle.Product;
+    public boolean useCatalogInRules;
+    public Bundle();
+    public void addMessage(string msg);
+    public void addPrice(float amount);
+    public void applyDiscountInEuros(double discount, string reason);
+    public void applyDiscountInPercentage(double discount, string reason);
+    public void deductPrice(double amount);
+    public void price(float price);
+    public void setUnknownApplySpecialDiscount();
+    public void setUnknownCatalogPrice();
+    public void setUnknownNegotiatedDiscount();
+    public void setUnknownNegotiatedPrice();
+    public void setUnknownNegotiationMaxMargin();
+    public void setUnknownUseCatalogInRules();
+}
+
+public class BundleIdType
+        extends string
+{
+    domain {static JuniorAccount, static YoungActiveAccount}
+    public static final readonly com.ibm.bisc.bundle.BundleIdType JuniorAccount;
+    public static final readonly com.ibm.bisc.bundle.BundleIdType YoungActiveAccount;
+}
+
+public class CardEnumType
+        extends string
+{
+    domain {static CreditClassic, static CreditGold, static DebitCard}
+    public static final readonly com.ibm.bisc.bundle.CardEnumType CreditClassic;
+    public static final readonly com.ibm.bisc.bundle.CardEnumType CreditGold;
+    public static final readonly com.ibm.bisc.bundle.CardEnumType DebitCard;
+}
+
+public class DeliveryFrequencyType
+        extends string
+{
+    domain {static bi_monthly, static daily, static ten_days}
+    public static final readonly com.ibm.bisc.bundle.DeliveryFrequencyType bi_monthly;
+    public static final readonly com.ibm.bisc.bundle.DeliveryFrequencyType daily;
+    public static final readonly com.ibm.bisc.bundle.DeliveryFrequencyType ten_days;
+}
+
+public class DeliveryType
+        extends string
+{
+    domain {static electronic, static paper}
+    public static final readonly com.ibm.bisc.bundle.DeliveryType electronic;
+    public static final readonly com.ibm.bisc.bundle.DeliveryType paper;
+}
+
+public class Product
+        extends ilog.rules.xml.IlrXmlObject
+{
+    public string cardType;
+    public readonly com.ibm.bisc.bundle.CardEnumType cardTypeEnum;
+    public double catalogPrice;
+    public string deliveryFrequency;
+    public readonly com.ibm.bisc.bundle.DeliveryFrequencyType deliveryFrequencyEnum;
+    public string deliveryType domain {"Paper", "Electronic"};
+    public readonly com.ibm.bisc.bundle.DeliveryType deliveryTypeEnum;
+    public java.util.Vector messageDiscountListList domain 0,* class string
+                property "factory.ignore" "true";
+    public string name;
+    public double negotiatedDiscount;
+    public double negotiatedPrice;
+    public readonly com.ibm.bisc.bundle.ProductIdType productId;
+    public string type;
+    public Product();
+    public void applyCatalogDiscountInEuros(double amount, string message);
+    public void applyCatalogDiscountInPercentage(double percent, string message);
+    public void applyDiscountInEuros(double discount, string reason);
+    public void applyDiscountInPercentage(double discount, string reason);
+    public void price(float price);
+    public void setUnknownCatalogPrice();
+    public void setUnknownNegotiatedDiscount();
+    public void setUnknownNegotiatedPrice();
+}
+
+public class ProductIdType
+        extends string
+{
+    domain {static SmartAccount, static SmartBillPayment, static SmartCard, static SmartInternetBanking, static SmartNotification, static SmartPassbook, static SmartStatement}
+    public static final readonly com.ibm.bisc.bundle.ProductIdType SmartAccount;
+    public static final readonly com.ibm.bisc.bundle.ProductIdType SmartBillPayment;
+    public static final readonly com.ibm.bisc.bundle.ProductIdType SmartCard;
+    public static final readonly com.ibm.bisc.bundle.ProductIdType SmartInternetBanking;
+    public static final readonly com.ibm.bisc.bundle.ProductIdType SmartNotification;
+    public static final readonly com.ibm.bisc.bundle.ProductIdType SmartPassbook;
+    public static final readonly com.ibm.bisc.bundle.ProductIdType SmartStatement;
+}
+

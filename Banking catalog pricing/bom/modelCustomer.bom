@@ -1,0 +1,18 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/Banking catalog pricing//Banking catalog pricing/xml/Customer.xsd"
+property uuid "8eb249ff-0bfe-4669-a117-03d98a368ee1"
+package com.ibm.bisc.customer;
+
+
+public class Customer
+        extends ilog.rules.xml.IlrXmlObject
+{
+    public int age;
+    public string name;
+    public int segment;
+    public string value;
+    public readonly double volume;
+    public Customer();
+}
+

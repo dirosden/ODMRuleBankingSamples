@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:BRLRuleTemplate xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Fraud detected Rule Template</name>
+  <uuid>3ec72c44-7808-4362-9b46-9e05823a719f</uuid>
+  <rule xsi:type="ilog.rules.studio.model.brl:ActionRule">
+    <locale>en_US</locale>
+    <definition><![CDATA[if
+	<condition>
+then
+	mark transaction as fraud with reason "## Fraud detected as XXX" ;]]></definition>
+    <definitionInfo>
+<templateInfo>
+  <freezeInfo type="optionalFrozen" value="else-actions">/rule</freezeInfo>
+  <freezeInfo type="multipleFrozen" value="action">/rule/actions</freezeInfo>
+  <freezeInfo type="frozen">/rule/actions/action/action-sentence</freezeInfo>
+</templateInfo></definitionInfo>
+  </rule>
+</ilog.rules.studio.model.brl:BRLRuleTemplate>

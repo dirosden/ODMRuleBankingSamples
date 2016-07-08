@@ -1,0 +1,86 @@
+# Vocabulary Properties
+uuid = 0f6acf54-f661-43f2-acdc-d6a4ad0a2441
+
+# Term: card type
+@card\ type#gender = NEUTRAL
+
+# Term: delivery frequency
+@delivery\ frequency#gender = NEUTRAL
+
+# Term: delivery type
+@delivery\ type#gender = NEUTRAL
+
+# Term: id
+@id#gender = NEUTRAL
+
+# Term: negotiation limit
+@negotiation\ limit#gender = NEUTRAL
+
+# com.ibm.bisc.bundle.Bundle
+com.ibm.bisc.bundle.Bundle#concept.label = bundle
+com.ibm.bisc.bundle.Bundle.addMessage(java.lang.String)#phrase.action = add the message: {0} to {this}
+com.ibm.bisc.bundle.Bundle.addPrice(float)#phrase.action = add {0} € to the negociated price of {this}
+com.ibm.bisc.bundle.Bundle.applyDiscountInEuros(double,java.lang.String)#phrase.action = apply to {this} a discount of {0, <discount>} € for the reason {1, <reason>}
+com.ibm.bisc.bundle.Bundle.applyDiscountInPercentage(double,java.lang.String)#phrase.action = apply to {this} a discount of {0, <discount>} % for the reason {1, <reason>}
+com.ibm.bisc.bundle.Bundle.applySpecialDiscount#phrase.navigation = {this} has special discount
+com.ibm.bisc.bundle.Bundle.bundleId#phrase.navigation = {id} of {this}
+com.ibm.bisc.bundle.Bundle.catalogPrice#phrase.action = set the catalog price of {this} to {catalog price}
+com.ibm.bisc.bundle.Bundle.catalogPrice#phrase.navigation = {catalog price} of {this}
+com.ibm.bisc.bundle.Bundle.deductPrice(double)#phrase.action = deduct {0} € to the negociated price of {this}
+com.ibm.bisc.bundle.Bundle.messageDiscountListList#phrase.navigation = {message discount list} of {this}
+com.ibm.bisc.bundle.Bundle.negotiatedDiscount#phrase.action = set the negotiated discount of {this} to {negotiated discount}
+com.ibm.bisc.bundle.Bundle.negotiatedDiscount#phrase.navigation = {negotiated discount} of {this}
+com.ibm.bisc.bundle.Bundle.negotiatedPrice#phrase.navigation = {negotiated price} of {this}
+com.ibm.bisc.bundle.Bundle.negotiationMaxMargin#phrase.action = set the negotiation limit of {this} to {negotiation limit}
+com.ibm.bisc.bundle.Bundle.negotiationMaxMargin#phrase.navigation = {negotiation limit} of {this}
+com.ibm.bisc.bundle.Bundle.price(float)#phrase.action = set the price of {this} to {0, <amount>} €
+com.ibm.bisc.bundle.Bundle.productList#phrase.navigation = {product} of {this}
+
+# com.ibm.bisc.bundle.BundleIdType
+com.ibm.bisc.bundle.BundleIdType#concept.label = bundle id
+com.ibm.bisc.bundle.BundleIdType.JuniorAccount#instance.label = Junior Account
+com.ibm.bisc.bundle.BundleIdType.YoungActiveAccount#instance.label = Young Active Account
+
+# com.ibm.bisc.bundle.CardEnumType
+com.ibm.bisc.bundle.CardEnumType#concept.label = card enum type
+com.ibm.bisc.bundle.CardEnumType.CreditClassic#instance.label = Credit Classic
+com.ibm.bisc.bundle.CardEnumType.CreditGold#instance.label = Credit Gold
+com.ibm.bisc.bundle.CardEnumType.DebitCard#instance.label = Debit Card
+
+# com.ibm.bisc.bundle.DeliveryFrequencyType
+com.ibm.bisc.bundle.DeliveryFrequencyType#concept.label = delivery frequency type
+com.ibm.bisc.bundle.DeliveryFrequencyType.bi_monthly#instance.label = Bi-Monthly
+com.ibm.bisc.bundle.DeliveryFrequencyType.daily#instance.label = Daily
+com.ibm.bisc.bundle.DeliveryFrequencyType.ten_days#instance.label = Ten Days
+
+# com.ibm.bisc.bundle.DeliveryType
+com.ibm.bisc.bundle.DeliveryType#concept.label = delivery type
+com.ibm.bisc.bundle.DeliveryType.electronic#instance.label = Electronic
+com.ibm.bisc.bundle.DeliveryType.paper#instance.label = Paper
+
+# com.ibm.bisc.bundle.Product
+com.ibm.bisc.bundle.Product#concept.label = product
+com.ibm.bisc.bundle.Product.applyCatalogDiscountInEuros(double,java.lang.String)#phrase.action = apply to {this} a discount on catalog price of {0, <discount>} € for the reason {1, <reason>}
+com.ibm.bisc.bundle.Product.applyCatalogDiscountInPercentage(double,java.lang.String)#phrase.action = apply to {this} a discount on catalog price of {0, <discount>} % for the reason {1, <reason>}
+com.ibm.bisc.bundle.Product.applyDiscountInEuros(double,java.lang.String)#phrase.action = apply to {this} a discount of {0, <discount>} € for the reason {1, <reason>}
+com.ibm.bisc.bundle.Product.applyDiscountInPercentage(double,java.lang.String)#phrase.action = apply to {this} a discount of {0, <discount>} % for the reason {1, <reason>}
+com.ibm.bisc.bundle.Product.cardTypeEnum#phrase.navigation = {card type} of {this}
+com.ibm.bisc.bundle.Product.catalogPrice#phrase.navigation = {catalog price} of {this}
+com.ibm.bisc.bundle.Product.deliveryFrequencyEnum#phrase.navigation = {delivery frequency} of {this}
+com.ibm.bisc.bundle.Product.deliveryTypeEnum#phrase.navigation = {delivery type} of {this}
+com.ibm.bisc.bundle.Product.messageDiscountListList#phrase.navigation = {message discount list} of {this}
+com.ibm.bisc.bundle.Product.negotiatedDiscount#phrase.navigation = {negotiated discount} of {this}
+com.ibm.bisc.bundle.Product.negotiatedPrice#phrase.navigation = {negotiated price} of {this}
+com.ibm.bisc.bundle.Product.price(float)#phrase.action = price {this} {0, <price>} € by default
+com.ibm.bisc.bundle.Product.productId#phrase.navigation = {id} of {this}
+com.ibm.bisc.bundle.Product.type#phrase.navigation = {type} of {this}
+
+# com.ibm.bisc.bundle.ProductIdType
+com.ibm.bisc.bundle.ProductIdType#concept.label = product id
+com.ibm.bisc.bundle.ProductIdType.SmartAccount#instance.label = Smart Account
+com.ibm.bisc.bundle.ProductIdType.SmartBillPayment#instance.label = Smart Bill Payment
+com.ibm.bisc.bundle.ProductIdType.SmartCard#instance.label = Smart Card
+com.ibm.bisc.bundle.ProductIdType.SmartInternetBanking#instance.label = Smart Internet Banking
+com.ibm.bisc.bundle.ProductIdType.SmartNotification#instance.label = Smart Notification
+com.ibm.bisc.bundle.ProductIdType.SmartPassbook#instance.label = Smart Passbook
+com.ibm.bisc.bundle.ProductIdType.SmartStatement#instance.label = Smart Statement

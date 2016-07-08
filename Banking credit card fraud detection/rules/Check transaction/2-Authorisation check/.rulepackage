@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>2-Authorisation check</name>
+  <uuid>065210bb-4105-434f-a373-121a7b370a9e</uuid>
+</ilog.rules.studio.model.base:RulePackage>

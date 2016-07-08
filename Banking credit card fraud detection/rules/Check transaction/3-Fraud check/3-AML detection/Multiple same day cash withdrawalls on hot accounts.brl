@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Multiple same day cash withdrawalls on hot accounts</name>
+  <uuid>e85e91bd-57df-4586-8695-f365d2eb1baa</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the card holder ID of TXN is one of 'the hotlist of accounts'
+    and the MCC of TXN is "6011"
+    and the amount of TXN is at least 500
+    and the number of Transactions in the recent transactions of 'TXN Data'
+            where the MCC of each Transaction is "6011"
+            and the date/time of each Transaction is within 24 hours of the date/time of TXN , is at least 2
+then
+    mark transaction as fraud with reason "AML - Multiple large same day cash withdrawalls on hot account" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

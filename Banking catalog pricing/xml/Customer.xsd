@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://bisc.ibm.com/Customer" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cus="http://bisc.ibm.com/Customer">
+
+    <complexType name="Customer">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="age" type="int"></element>
+    		<element name="segment" type="int"></element>
+    		<element name="value" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="customer" type="cus:Customer"></element>
+</schema>

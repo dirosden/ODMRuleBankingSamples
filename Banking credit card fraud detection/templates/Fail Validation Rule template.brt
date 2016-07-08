@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:BRLRuleTemplate xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Fail Validation Rule template</name>
+  <uuid>90fc1d64-7a77-4e4d-af9d-e564d1df8b0e</uuid>
+  <rule xsi:type="ilog.rules.studio.model.brl:ActionRule">
+    <locale>en_US</locale>
+    <definition><![CDATA[if
+	<condition>
+then
+	mark data as invalid with reason "** Transaction invalid as XXX **" ;]]></definition>
+    <definitionInfo>
+<templateInfo>
+  <freezeInfo type="multipleFrozen" value="action">/rule/actions</freezeInfo>
+  <freezeInfo type="frozen">/rule/actions/action/action-sentence</freezeInfo>
+</templateInfo></definitionInfo>
+  </rule>
+</ilog.rules.studio.model.brl:BRLRuleTemplate>

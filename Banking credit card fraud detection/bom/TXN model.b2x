@@ -1,0 +1,77 @@
+<b2x:translation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.ilog.com/JRules/1.1/Translation ilog/rules/schemas/1_1/b2x.xsd"
+        xmlns:b2x="http://schemas.ilog.com/JRules/1.1/Translation">
+    <id>aefd3343-cc1b-4ff7-ac0e-124c3aa82dd7</id>
+    <class>
+        <businessName>com.ilog.fraud.RealTimeCheckData</businessName>
+        <method>
+            <name>b2xKYCStatus</name>
+            <body language="irl"><![CDATA[
+            // -- TODO -- Replace this stub with a "real" customer status look-up
+return "Medium";
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>com.ilog.fraud.TransactionType</businessName>
+        <method>
+            <name>TransAmountCAD</name>
+            <body language="irl"><![CDATA[
+            // -- Convert to Canadian $
+if (this.CurrencyCode.equals("CAD"))
+	return this.TransAmount;
+else if (this.CurrencyCode.equals("GBP"))
+	return this.TransAmount * 1.40;
+else if (this.CurrencyCode.equals("USD"))
+	return this.TransAmount / 1.40;
+else if (this.CurrencyCode.equals("EUR"))
+	return this.TransAmount / 1.40;
+else 
+	return this.TransAmount;
+            ]]></body>
+        </method>
+        <method>
+            <name>TransAmountEuro</name>
+            <body language="irl"><![CDATA[
+            // -- Convert to EUROS
+if (this.CurrencyCode.equals("EUR"))
+	return this.TransAmount;
+else if (this.CurrencyCode.equals("GBP"))
+	return this.TransAmount * 1.40;
+else if (this.CurrencyCode.equals("USD"))
+	return this.TransAmount / 1.40;
+else 
+	return this.TransAmount;
+            ]]></body>
+        </method>
+        <method>
+            <name>TransAmountGBP</name>
+            <body language="irl"><![CDATA[
+            if (this.CurrencyCode.equals("GBP"))
+	return this.TransAmount;
+else if (this.CurrencyCode.equals("EUR"))
+	return this.TransAmount * 1.40;
+else if (this.CurrencyCode.equals("USD"))
+	return this.TransAmount * 2.00;
+else 
+	return this.TransAmount;
+            ]]></body>
+        </method>
+        <method>
+            <name>TransAmountUSD</name>
+            <body language="irl"><![CDATA[
+            // -- Convert to US $
+if (this.CurrencyCode.equals("USD"))
+	return this.TransAmount;
+else if (this.CurrencyCode.equals("GBP"))
+	return this.TransAmount * 1.977;
+else if (this.CurrencyCode.equals("CAN"))
+	return this.TransAmount * .989;
+else if (this.CurrencyCode.equals("EUR"))
+	return this.TransAmount * 1.572;
+else 
+	return this.TransAmount;
+            ]]></body>
+        </method>
+    </class>
+</b2x:translation>

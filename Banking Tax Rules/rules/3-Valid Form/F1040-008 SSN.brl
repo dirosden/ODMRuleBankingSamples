@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="historyVersion" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="9 Sep 2005 16:06:12 GMT"/>
+    <details key="lastModificationDate" value="9 Sep 2005 16:12:09 GMT"/>
+  </eAnnotations>
+  <name>F1040-008 SSN</name>
+  <uuid>bcfa1384-9f7e-4941-ae2a-e58855a32b12</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the ssn of F1040EZ is empty 
+then
+	error message: "You must enter your SSN." ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

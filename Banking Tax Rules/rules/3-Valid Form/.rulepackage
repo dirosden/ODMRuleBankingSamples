@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>3-Valid Form</name>
+  <uuid>37ad69f1-17ba-4259-89b3-77b378ce3473</uuid>
+</model.base:RulePackage>

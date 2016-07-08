@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Bundle Catalog Price Calculation</name>
+  <uuid>685031da-7000-49e6-b1c3-c0cdc588a5e0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+ for each product in the products of 'the bundle' : 
+	- set the catalog price of 'the bundle' to the catalog price of 'the bundle' + the catalog price of this product;
+	]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

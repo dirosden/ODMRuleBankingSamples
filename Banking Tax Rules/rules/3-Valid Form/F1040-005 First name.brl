@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="historyVersion" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="9 Sep 2005 16:05:03 GMT"/>
+    <details key="lastModificationDate" value="9 Sep 2005 16:12:09 GMT"/>
+  </eAnnotations>
+  <name>F1040-005 First name</name>
+  <uuid>15d7f1b3-c6ae-479e-bfa2-5fbbb8cda772</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the first name of F1040EZ is empty
+then
+	error message: "You must enter your first name." ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,54 @@
+
+property uuid "6058c575-1b18-4a15-8e83-4c8829ac8cb7"
+
+public class CountriesDomainType
+{
+    domain 
+    {
+        static Australia,
+        static Canada,
+        static China,
+        static Croatia,
+        static CzechRepublic,
+        static France,
+        static Germany,
+        static Iceland,
+        static India,
+        static Italy,
+        static Japan,
+        static Malaysia,
+        static NewZealand,
+        static Norway,
+        static Pakistan,
+        static Poland,
+        static Russia,
+        static Singapore,
+        static Spain,
+        static Thailand,
+        static UK,
+        static USA
+    }
+    public static final readonly CountriesDomainType Australia;
+    public static final readonly CountriesDomainType Canada;
+    public static final readonly CountriesDomainType China;
+    public static final readonly CountriesDomainType Croatia;
+    public static final readonly CountriesDomainType CzechRepublic;
+    public static final readonly CountriesDomainType France;
+    public static final readonly CountriesDomainType Germany;
+    public static final readonly CountriesDomainType Iceland;
+    public static final readonly CountriesDomainType India;
+    public static final readonly CountriesDomainType Italy;
+    public static final readonly CountriesDomainType Japan;
+    public static final readonly CountriesDomainType Malaysia;
+    public static final readonly CountriesDomainType NewZealand;
+    public static final readonly CountriesDomainType Norway;
+    public static final readonly CountriesDomainType Pakistan;
+    public static final readonly CountriesDomainType Poland;
+    public static final readonly CountriesDomainType Russia;
+    public static final readonly CountriesDomainType Singapore;
+    public static final readonly CountriesDomainType Spain;
+    public static final readonly CountriesDomainType Thailand;
+    public static final readonly CountriesDomainType UK;
+    public static final readonly CountriesDomainType USA;
+}
+

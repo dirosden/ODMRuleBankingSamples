@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>ID too long</name>
+  <uuid>915062f6-cefe-42df-93ab-3af95484c9b4</uuid>
+  <documentation><![CDATA[Note that this Ruleset expects the card numbers to include spaces between each set of 4 digits e.g. "1234 5678 1234 5678" hence length > 19]]></documentation>
+  <categories>any</categories>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the length of the card holder ID of TXN is more than 19 
+then
+	mark data as invalid with reason "ID too long" ;]]></definition>
+  <status>deployable</status>
+</ilog.rules.studio.model.brl:ActionRule>

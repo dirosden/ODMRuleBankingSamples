@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check for null fields</name>
+  <uuid>15600f87-f661-4f5b-aceb-36a62675ea2a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the card holder ID of TXN is empty
+	or the merchant ID of TXN is empty
+	or the date/time of TXN is null
+then
+	mark data as invalid with reason "Null fields in input transaction" ;]]></definition>
+  <status>deployable</status>
+</ilog.rules.studio.model.brl:ActionRule>

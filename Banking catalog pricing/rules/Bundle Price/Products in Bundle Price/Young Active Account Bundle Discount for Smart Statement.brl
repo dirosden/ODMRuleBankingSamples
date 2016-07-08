@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Young Active Account Bundle Discount for Smart Statement</name>
+  <uuid>4e7a8dda-1fcd-4210-b1e1-5174c1ddf2cd</uuid>
+  <documentation><![CDATA[BUNDLE_ID=Young Active Account]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+	set 'smartStatement' to a product in the products of 'the bundle' where the id of this product is Smart Statement ; 
+if 
+	 the negotiated price of smartStatement is more than 0 
+then 
+	apply to smartStatement a discount of 1 € for the reason "Smart Statement has 1€ discount when is part of a bundle"; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore" isADecisionService="true" migrationFlag="1" MigratedToOperationId="a46935e0-5dc7-413d-bf2f-ab25a3d5da1b">
+  <name>Banking catalog pricing</name>
+  <uuid>54a74b99-c24c-4c55-8137-ebbf3c2b85d9</uuid>
+  <outputLocation>output</outputLocation>
+  <categories>any</categories>
+  <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
+    <entries xsi:type="ilog.rules.studio.model.xom:DynamicXOMPathEntry" name="Bundle.xsd" url="platform:/Banking catalog pricing/xml/Bundle.xsd" kind="XSD" rootPackage="com.ibm.bisc.bundle" namespace="http://bisc.ibm.com/Bundle"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:DynamicXOMPathEntry" name="Customer.xsd" url="platform:/Banking catalog pricing/xml/Customer.xsd" kind="XSD" rootPackage="com.ibm.bisc.customer" namespace="http://bisc.ibm.com/Customer"/>
+  </paths>
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="modelBundle" url="platform:/Banking catalog pricing/bom/modelBundle.bom" origin="xom:/Banking catalog pricing//Banking catalog pricing/xml/Bundle.xsd"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="modelCustomer" url="platform:/Banking catalog pricing/bom/modelCustomer.bom" origin="xom:/Banking catalog pricing//Banking catalog pricing/xml/Customer.xsd"/>
+  </paths>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
+    <name>rules</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.bom:BOMFolder">
+    <name>bom</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.rule:TemplateFolder">
+    <name>templates</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.query:QueryFolder">
+    <name>queries</name>
+  </modelFolders>
+  <modelFolders xsi:type="com.ibm.rules.studio.model.decisionservice:OperationFolder">
+    <name>deployment</name>
+  </modelFolders>
+  <schemaDependencies location="./xml/Customer.xsd" namespace="http://bisc.ibm.com/Customer"/>
+  <schemaDependencies location="./xml/Bundle.xsd" namespace="http://bisc.ibm.com/Bundle"/>
+</ilog.rules.studio.model.base:RuleProject>

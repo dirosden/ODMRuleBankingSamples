@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Over limit by country</name>
+  <uuid>606d9027-6c4b-46e1-ae69-e78cf4529022</uuid>
+  <categories>any</categories>
+  <locale>en_US</locale>
+  <definition>
+<DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
+  <Body>
+    <Structure>
+      <ConditionDefinitions>
+        <ConditionDefinition Id="C0">
+          <ExpressionDefinition>
+            <Text><![CDATA[the country of TXN is <an object>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+        <ConditionDefinition Id="C1">
+          <ExpressionDefinition>
+            <Text><![CDATA[the amount of TXN is more than <a number>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+      </ConditionDefinitions>
+      <ActionDefinitions>
+        <ActionDefinition Id="A2">
+          <ExpressionDefinition>
+            <Text><![CDATA[mark transaction as fraud with reason <a string>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+      </ActionDefinitions>
+    </Structure>
+    <Contents>
+      <Partition DefId="C0">
+        <Condition>
+          <Expression>
+            <Param><![CDATA[UK]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[45000]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A2">
+                  <Expression>
+                    <Param><![CDATA["country limit exceeded for UK"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[China]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[115000]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A2">
+                  <Expression>
+                    <Param><![CDATA["country limit exceeded for China"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[Malaysia]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[90000]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A2">
+                  <Expression>
+                    <Param><![CDATA["country limit exceeded for Malaysia"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[USA]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[80000]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A2">
+                  <Expression>
+                    <Param><![CDATA["country limit exceeded for USA"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Otherwise/>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[100000]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A2">
+                  <Expression>
+                    <Param><![CDATA["over 100,000 units in other country"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression/>
+          <ActionSet>
+            <Action DefId="A2">
+              <Expression/>
+            </Action>
+          </ActionSet>
+        </Condition>
+      </Partition>
+    </Contents>
+  </Body>
+  <Resources DefaultLocale="en_US">
+    <ResourceSet Locale="en_GB">
+      <Data Name="Definitions(C0)#Width"><![CDATA[258]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[258]]></Data>
+    </ResourceSet>
+    <ResourceSet Locale="en_US">
+      <Data Name="Definitions(A2)#HeaderText"><![CDATA[Fraud detected]]></Data>
+      <Data Name="Definitions(A2)#Width"><![CDATA[568]]></Data>
+      <Data Name="Definitions(C0)#HTMLWidth"><![CDATA[150]]></Data>
+      <Data Name="Definitions(C0)#HeaderText"><![CDATA[Country of TXN]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[482]]></Data>
+      <Data Name="Definitions(C1)#HTMLWidth"><![CDATA[150]]></Data>
+      <Data Name="Definitions(C1)#HeaderText"><![CDATA[Amount >]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[291]]></Data>
+    </ResourceSet>
+  </Resources>
+</DT></definition>
+  <status>deployable</status>
+</ilog.rules.studio.model.dt:DecisionTable>

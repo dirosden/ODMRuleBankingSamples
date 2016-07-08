@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore" isADecisionService="true" migrationFlag="1" MigratedToOperationId="1173bd5a-28a1-44f0-8a9a-dd5b5e79fc1e">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="securityEnforced" value="false"/>
+  </eAnnotations>
+  <name>Banking credit card fraud</name>
+  <uuid>38b9970d-fc7d-48a0-b398-10948db1f056</uuid>
+  <outputLocation>output</outputLocation>
+  <categories>any</categories>
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="Helpers-model" url="platform:/Banking credit card fraud/bom/Helpers-model.bom"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="TXN model" url="platform:/Banking credit card fraud/bom/TXN model.bom" origin="xom:/Banking credit card fraud//Banking credit card fraud/schemas/RealTimeData.xsd"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="domain-Values" url="platform:/Banking credit card fraud/bom/domain-Values.bom"/>
+  </paths>
+  <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
+    <entries xsi:type="ilog.rules.studio.model.xom:DynamicXOMPathEntry" name="RealTimeData.xsd" url="platform:/Banking credit card fraud/schemas/RealTimeData.xsd" kind="XSD" rootPackage="com.ilog.fraud" namespace="http://www.ilog.com/fraud"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY"/>
+  </paths>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
+    <name>rules</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.bom:BOMFolder">
+    <name>bom</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.rule:TemplateFolder">
+    <name>templates</name>
+  </modelFolders>
+  <modelFolders xsi:type="com.ibm.rules.studio.model.decisionservice:OperationFolder">
+    <name>deployment</name>
+  </modelFolders>
+  <schemaDependencies location="./schemas/RealTimeData.xsd" namespace="http://www.ilog.com/fraud"/>
+  <documentation><![CDATA[Ilog JRules Credit Card Fraud demo version 4.2]]></documentation>
+</ilog.rules.studio.model.base:RuleProject>

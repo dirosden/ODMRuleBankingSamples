@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:model.base="http://ilog.rules.studio/model/base.ecore" xmlns:model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:model.query="http://ilog.rules.studio/model/query.ecore" xmlns:model.rule="http://ilog.rules.studio/model/rule.ecore" xmlns:model.xom="http://ilog.rules.studio/model/xom.ecore" isADecisionService="true" migrationFlag="1" MigratedToOperationId="1598c3cd-21c2-42d2-b104-6472a3952dbc">
+  <name>Banking Tax Rules</name>
+  <uuid>e0e9a9f4-21ee-423c-9bce-a60a7089a17b</uuid>
+  <outputLocation>output</outputLocation>
+  <categories>any</categories>
+  <rulesetProperties></rulesetProperties>
+  <paths xsi:type="model.xom:XOMPath" pathID="XOM">
+    <entries xsi:type="model.xom:DynamicXOMPathEntry" name="eztax.xsd" url="platform:/Banking Tax Rules/eztax.xsd" kind="XSD" rootPackage="eztax" namespace="eztax"/>
+    <entries xsi:type="model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY" exported="false"/>
+  </paths>
+  <paths xsi:type="model.bom:BOMPath" pathID="BOM">
+    <entries xsi:type="model.bom:BOMEntry" name="tax_model" url="platform:/Banking Tax Rules/bom/tax_model.bom" origin="xom:/Banking Tax Rules//Banking Tax Rules/eztax.xsd"/>
+  </paths>
+  <modelFolders xsi:type="model.base:SourceFolder">
+    <name>rules</name>
+  </modelFolders>
+  <modelFolders xsi:type="model.bom:BOMFolder">
+    <name>bom</name>
+  </modelFolders>
+  <modelFolders xsi:type="model.rule:TemplateFolder">
+    <name>templates</name>
+  </modelFolders>
+  <modelFolders xsi:type="model.query:QueryFolder">
+    <name>queries</name>
+  </modelFolders>
+  <modelFolders xsi:type="model.base:ResourceFolder">
+    <name>resources</name>
+  </modelFolders>
+  <modelFolders xsi:type="com.ibm.rules.studio.model.decisionservice:OperationFolder">
+    <name>deployment</name>
+  </modelFolders>
+  <schemaDependencies location="./eztax.xsd" namespace="eztax"/>
+</model.base:RuleProject>

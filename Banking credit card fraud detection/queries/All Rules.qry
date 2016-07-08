@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.query:Query xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore">
+  <name>All Rules</name>
+  <uuid>b411d8d2-1114-4605-9c12-537626d982b9</uuid>
+  <definition><![CDATA[Find all business rules
+]]></definition>
+  <includeDependencies>false</includeDependencies>
+</ilog.rules.studio.model.query:Query>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="historyVersion" value="false"/>
+    <details key="editable" value="true"/>
+    <details key="modified" value="false"/>
+    <details key="creationDate" value="9 Sep 2005 15:29:24 GMT"/>
+    <details key="lastModificationDate" value="9 Sep 2005 16:12:09 GMT"/>
+  </eAnnotations>
+  <name>F1040-004 Adjusted Gross Income</name>
+  <uuid>47f6cb62-3f85-40fe-9925-4683cd4baf04</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the adjusted gross income of F1040EZ does not equal the wages salaries tips of F1040EZ 
+then
+	error message: "Your adjusted gross income is incorrectly calculated." ;
+	  ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

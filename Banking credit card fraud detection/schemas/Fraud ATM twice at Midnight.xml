@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:RealTimeCheckData xmlns:n="http://www.ilog.com/fraud" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ilog.com/fraud
+C:\ILOG\Demos\CreditCardFraud\CLEANE~1\CreditCardFraudRules\Schemas\RealTimeData.xsd">
+	<CardHolderFullName>Andy Mac</CardHolderFullName>
+	<CardHolderMonthlyAverage>150</CardHolderMonthlyAverage>
+	<CardHolderLimit>2000</CardHolderLimit>
+	<CardHolderBalance>100</CardHolderBalance>
+	<CardType>CREDIT</CardType>
+	<CardIssueDate>1990-08-13</CardIssueDate>
+	<ValidFrom>2000-08-13</ValidFrom>
+	<ValidTo>2020-08-13</ValidTo>
+	<SecurityID>2001-12-17T09:30:47.0Z</SecurityID>
+	<CurrentTransaction>
+		<TransID>123456</TransID>
+		<TransDateTime>2010-03-02T00:36:47.0Z</TransDateTime>
+		<CardHolderID>1234 5678 3456 2345</CardHolderID>
+		<TransAmount>250</TransAmount>
+		<CurrencyCode>GBP</CurrencyCode>
+		<MerchantID>NatWestATM</MerchantID>
+		<MerchantCC>6011</MerchantCC>
+		<MerchantCountry>UK</MerchantCountry>
+		<POSEntryCode>Other</POSEntryCode>
+		<SICCode>222</SICCode>
+		<PurchaseDescription>ATM Cash withdrawall</PurchaseDescription>
+	</CurrentTransaction>
+	<RecentTransactions>
+		<TransID>65432</TransID>
+		<TransDateTime>2010-03-01T23:55:47.0Z</TransDateTime>
+		<CardHolderID>1234 5678 3456 2345</CardHolderID>
+		<TransAmount>250</TransAmount>
+		<CurrencyCode>GBP</CurrencyCode>
+		<MerchantID>NatWestATM</MerchantID>
+		<MerchantCC>6011</MerchantCC>
+		<MerchantCountry>UK</MerchantCountry>
+		<POSEntryCode>Other</POSEntryCode>
+		<SICCode>222</SICCode>
+		<PurchaseDescription>ATM Cash withdrawall</PurchaseDescription>
+	</RecentTransactions>
+</n:RealTimeCheckData>

@@ -1,0 +1,260 @@
+<b2x:translation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.ilog.com/JRules/1.1/Translation ilog/rules/schemas/1_1/b2x.xsd"
+        xmlns:b2x="http://schemas.ilog.com/JRules/1.1/Translation">
+    <id>54043d55-8161-4570-a9e2-165eeeb0c353</id>
+    <class>
+        <businessName>com.ibm.bisc.bundle.Bundle</businessName>
+        <attribute>
+            <name>bundleId</name>
+            <getter language="irl"><![CDATA[
+            return this.name;
+            ]]></getter>
+        </attribute>
+        <method>
+            <name>addMessage</name>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            this.messageDiscountListList.add(msg);
+            ]]></body>
+        </method>
+        <method>
+            <name>addPrice</name>
+            <parameter type="float"/>
+            <body language="irl"><![CDATA[
+            this.negotiatedPrice += amount;
+            ]]></body>
+        </method>
+        <method>
+            <name>applyDiscountInEuros</name>
+            <parameter type="double"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            this.negotiatedPrice -= discount;
+this.messageDiscountListList.add("DISCOUNT OF " + discount + ": " + reason);
+            ]]></body>
+        </method>
+        <method>
+            <name>applyDiscountInPercentage</name>
+            <parameter type="double"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            double qty = (this.negotiatedPrice * discount) / 100;
+this.negotiatedPrice -= qty;
+this.messageDiscountListList.add("DISCOUNT OF " + qty + " ("+ discount +"%): " + reason);
+            ]]></body>
+        </method>
+        <method>
+            <name>deductPrice</name>
+            <parameter type="double"/>
+            <body language="irl"><![CDATA[
+            if(this.negotiatedPrice <= amount) {
+	this.negotiatedPrice = 0;
+} else {
+	this.negotiatedPrice -= amount;
+}
+            ]]></body>
+        </method>
+        <method>
+            <name>price</name>
+            <parameter type="float"/>
+            <body language="irl"><![CDATA[
+            this.negotiatedPrice += price;
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>com.ibm.bisc.bundle.BundleIdType</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>JuniorAccount</name>
+            <getter language="irl"><![CDATA[
+            return "Junior Account";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>YoungActiveAccount</name>
+            <getter language="irl"><![CDATA[
+            return "Young Active Account";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.bisc.bundle.CardEnumType</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>CreditClassic</name>
+            <getter language="irl"><![CDATA[
+            return "Credit Classic";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>CreditGold</name>
+            <getter language="irl"><![CDATA[
+            return "Credit Gold";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>DebitCard</name>
+            <getter language="irl"><![CDATA[
+            return "Debit Card";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.bisc.bundle.DeliveryFrequencyType</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>bi_monthly</name>
+            <getter language="irl"><![CDATA[
+            return "Bi-Monthly";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>daily</name>
+            <getter language="irl"><![CDATA[
+            return "Daily";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>ten_days</name>
+            <getter language="irl"><![CDATA[
+            return "Ten Days";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.bisc.bundle.DeliveryType</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>electronic</name>
+            <getter language="irl"><![CDATA[
+            return "Electronic";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>paper</name>
+            <getter language="irl"><![CDATA[
+            return "Paper";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.bisc.bundle.Product</businessName>
+        <attribute>
+            <name>cardTypeEnum</name>
+            <getter language="irl"><![CDATA[
+            return this.cardType;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>deliveryFrequencyEnum</name>
+            <getter language="irl"><![CDATA[
+            return this.deliveryFrequency;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>deliveryTypeEnum</name>
+            <getter language="irl"><![CDATA[
+            return this.deliveryType;
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>productId</name>
+            <getter language="irl"><![CDATA[
+            return this.name;
+            ]]></getter>
+        </attribute>
+        <method>
+            <name>applyCatalogDiscountInEuros</name>
+            <parameter type="double"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            this.catalogPrice -= amount;
+this.messageDiscountListList.add("DISCOUNT OF " + amount + " IN CATALOG PRICE: " + message);
+            ]]></body>
+        </method>
+        <method>
+            <name>applyCatalogDiscountInPercentage</name>
+            <parameter type="double"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            double qty = (this.catalogPrice * percent) / 100;
+this.catalogPrice -= qty;
+this.messageDiscountListList.add("DISCOUNT OF " + qty + " ("+ percent +"%) TO CATALOG PRICE: " + message);
+            ]]></body>
+        </method>
+        <method>
+            <name>applyDiscountInEuros</name>
+            <parameter type="double"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            this.negotiatedPrice -= discount;
+this.messageDiscountListList.add("DISCOUNT OF " + discount + ": " + reason);
+            ]]></body>
+        </method>
+        <method>
+            <name>applyDiscountInPercentage</name>
+            <parameter type="double"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            double qty = (this.negotiatedPrice * discount) / 100;
+this.negotiatedPrice -= qty;
+this.messageDiscountListList.add("DISCOUNT OF " + qty + " ("+ discount +"%): " + reason);
+            ]]></body>
+        </method>
+        <method>
+            <name>price</name>
+            <parameter type="float"/>
+            <body language="irl"><![CDATA[
+            this.catalogPrice = price;
+this.negotiatedPrice = price;
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>com.ibm.bisc.bundle.ProductIdType</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>SmartAccount</name>
+            <getter language="irl"><![CDATA[
+            return "Smart Account";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SmartBillPayment</name>
+            <getter language="irl"><![CDATA[
+            return "Smart Bill Payment";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SmartCard</name>
+            <getter language="irl"><![CDATA[
+            return "Smart Card";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SmartInternetBanking</name>
+            <getter language="irl"><![CDATA[
+            return "Smart Internet Banking";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SmartNotification</name>
+            <getter language="irl"><![CDATA[
+            return "Smart Notification";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SmartPassbook</name>
+            <getter language="irl"><![CDATA[
+            return "Smart Passbook";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>SmartStatement</name>
+            <getter language="irl"><![CDATA[
+            return "Smart Statement";
+            ]]></getter>
+        </attribute>
+    </class>
+</b2x:translation>

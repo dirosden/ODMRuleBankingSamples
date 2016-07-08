@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://bisc.ibm.com/Bundle" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:bun="http://bisc.ibm.com/Bundle">
+
+    <complexType name="Product">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="catalogPrice" type="double"></element>
+    		<element name="type" type="string"></element>
+    		<element name="deliveryType" type="string"></element>
+    		<element name="deliveryFrequency" type="string"></element>
+    		<element name="cardType" type="string"></element>
+    		<element name="negotiatedPrice" type="double"></element>
+    		<element name="negotiatedDiscount" type="double"></element>
+    		<element name="messageDiscountList" type="string"
+    			minOccurs="0" maxOccurs="unbounded">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Bundle">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="catalogPrice" type="float"></element>
+    		<element name="negotiationMaxMargin" type="double"></element>
+    		<element name="applySpecialDiscount" type="boolean"></element>
+    		<element name="product" type="bun:Product" minOccurs="0"
+    			maxOccurs="unbounded">
+    		</element>
+    		<element name="negotiatedPrice" type="double"></element>
+    		<element name="negotiatedDiscount" type="double"></element>
+    		<element name="messageDiscountList" type="string"
+    			minOccurs="0" maxOccurs="unbounded">
+    		</element>
+    		<element name="useCatalogInRules" type="boolean"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="bundle" type="bun:Bundle"></element>
+</schema>

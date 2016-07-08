@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Trace</name>
+  <uuid>fdc61897-24b5-43bf-8a64-09168c5494da</uuid>
+  <documentation><![CDATA[BUNDLE_ID=Young Active Account
+BUNDLE_ID=Junior Account]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the bundle' has special discount
+then
+    print "special discount for customer value: " + the value of 'the customer' ;
+else
+    print "no special discount" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

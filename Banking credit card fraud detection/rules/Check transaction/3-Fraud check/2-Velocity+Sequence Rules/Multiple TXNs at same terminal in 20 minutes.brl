@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Multiple TXNs at same terminal in 20 minutes</name>
+  <uuid>9404ca77-eda9-42fe-b7d6-100d84a63c25</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the number of Transactions in the recent transactions of 'TXN Data' 
+		where the trans ID of each Transaction is the trans ID of TXN 
+			and the date/time of each Transaction is within 20 minutes of the date/time of TXN , is at least 5 
+then
+	mark transaction as fraud with reason "Multiple TXNs at same terminal in 20 minutes"; 
+	]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

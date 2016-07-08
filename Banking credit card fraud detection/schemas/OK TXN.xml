@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:RealTimeCheckData xmlns:n="http://www.ilog.com/fraud" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ilog.com/fraud
+C:\ILOG\Demos\CreditCardFraud\CLEANE~1\CreditCardFraudRules\Schemas\RealTimeData.xsd">
+	<CardHolderFullName>Andy Mac</CardHolderFullName>
+	<CardHolderMonthlyAverage>150</CardHolderMonthlyAverage>
+	<CardHolderLimit>1000</CardHolderLimit>
+	<CardHolderBalance>100</CardHolderBalance>
+	<CardType>CREDIT</CardType>
+	<CardIssueDate>1990-08-13</CardIssueDate>
+	<ValidFrom>2000-08-13</ValidFrom>
+	<ValidTo>2020-08-13</ValidTo>
+	<SecurityID>2001-12-17T09:30:47.0Z</SecurityID>
+	<CurrentTransaction>
+		<TransID>123456</TransID>
+		<TransDateTime>2001-12-17T09:30:47.0Z</TransDateTime>
+		<CardHolderID>1234 5678 3456 2345</CardHolderID>
+		<TransAmount>399.99</TransAmount>
+		<CurrencyCode>GBP</CurrencyCode>
+		<MerchantID>Amazon</MerchantID>
+		<MerchantCC>1234</MerchantCC>
+		<MerchantCountry>UK</MerchantCountry>
+		<POSEntryCode>Web</POSEntryCode>
+		<SICCode>111</SICCode>
+		<PurchaseDescription>TV</PurchaseDescription>
+	</CurrentTransaction>
+	<RecentTransactions>
+		<TransID>65432</TransID>
+		<TransDateTime>2001-12-17T09:30:47.0Z</TransDateTime>
+		<CardHolderID>1234 5678 3456 2345</CardHolderID>
+		<TransAmount>47.50</TransAmount>
+		<CurrencyCode>GBP</CurrencyCode>
+		<MerchantID>Texaco</MerchantID>
+		<MerchantCC>4321</MerchantCC>
+		<MerchantCountry>UK</MerchantCountry>
+		<POSEntryCode>Chip+Pin</POSEntryCode>
+		<SICCode>111</SICCode>
+		<PurchaseDescription>Petrol</PurchaseDescription>
+	</RecentTransactions>
+</n:RealTimeCheckData>

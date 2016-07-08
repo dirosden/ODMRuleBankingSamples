@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.query:Query xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore">
+  <name>Make all New rules Deployable</name>
+  <uuid>dd73738f-352e-4ac2-af2b-65df8a5b6baf</uuid>
+  <definition><![CDATA[Find all business rules 
+	such that the status of each business rule is new 
+Do set the status of each business rule to deployable ]]></definition>
+  <locale>en_US</locale>
+</ilog.rules.studio.model.query:Query>

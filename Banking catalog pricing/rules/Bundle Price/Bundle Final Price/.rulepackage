@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Bundle Final Price</name>
+  <uuid>18ff67e8-900f-4eb0-a261-7edc1345885e</uuid>
+</ilog.rules.studio.model.base:RulePackage>

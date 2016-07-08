@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Junior Account Bundle</name>
+  <uuid>739d1e4e-f7a1-440f-8291-c5fc38ed3c96</uuid>
+  <documentation><![CDATA[BUNDLE_ID=Junior Account]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the id of 'the bundle' is Junior Account  
+then
+	for each product in the products of 'the bundle' :
+		- add the negotiated price of this product € to the negociated price of 'the bundle' 
+	    - add the message: "Added "+the negotiated price of this product+ "€ for the product "+the id of this product to 'the bundle' ;
+	set the negotiated discount of 'the bundle' to ( ( the negotiated price of 'the bundle' * the negotiation limit of 'the bundle' ) / 100 );
+	deduct the negotiated discount of 'the bundle' € to the negociated price of 'the bundle' ;
+	add the message: "Applied a discount of "+the negotiated discount of 'the bundle' + "€ corresponding to the negotiation limit" to 'the bundle' ; 
+	]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

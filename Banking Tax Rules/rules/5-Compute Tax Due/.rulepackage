@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>5-Compute Tax Due</name>
+  <uuid>b9c1fcfa-c2ad-458a-ae6c-27f5d2bc147e</uuid>
+</model.base:RulePackage>

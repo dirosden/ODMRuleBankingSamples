@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Parameters</name>
+  <uuid>d2774d26-f5a0-494b-ac75-38803facb10e</uuid>
+  <variables name="customer" type="com.ibm.bisc.customer.Customer" initialValue="" verbalization="the customer"/>
+  <variables name="bundle" type="com.ibm.bisc.bundle.Bundle" initialValue="" verbalization="the bundle"/>
+</ilog.rules.studio.model.base:VariableSet>
